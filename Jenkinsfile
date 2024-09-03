@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools { 
-        nodejs "NodeJS 22.6.0"
-        gradle "Gradle 8.10"
+        nodejs "NodeJS 22.70"  // Make sure this matches the NodeJS version configured in Jenkins
+        gradle "gradle"        // Update this to match the name in your Jenkins Global Tool Configuration
     }
     stages {
         stage('Clone Repository') {
