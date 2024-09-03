@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools { 
-        nodejs "NodeJS 22.70"  // Make sure this matches the NodeJS version configured in Jenkins
+        nodejs "NodeJS 22.7.0"  // Make sure this matches the NodeJS version configured in Jenkins
         gradle "gradle"        // Update this to match the name in your Jenkins Global Tool Configuration
     }
     stages {
