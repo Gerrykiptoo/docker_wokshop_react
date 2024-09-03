@@ -1,18 +1,18 @@
 pipeline {
     agent any
     tools { 
-        nodejs "NodeJS 22.7.0"  // Make sure this matches the NodeJS version configured in Jenkins
-        gradle "gradle"        // Update this to match the name in your Jenkins Global Tool Configuration
+        nodejs "NodeJS 22.7.0"
+        gradle "gradle"
     }
     stages {
         stage('Clone Repository') {
             steps { 
-                git 'https://github.com/Gerrykiptoo/docker_wokshop_react'
+                git branch: 'main', url: 'https://github.com/Gerrykiptoo/docker_wokshop_react'
             }
         }
         stage('Build Project') {
             steps {
-                dir('project-directory') { // Change to the subdirectory containing the Gradle build files
+                dir('project-directory') {
                     sh 'gradle build'
                 }
             }
